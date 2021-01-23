@@ -1,5 +1,4 @@
 # Pokemon-Kart-Oyunu
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
@@ -7,36 +6,36 @@
 	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
 	<META NAME="AUTHOR" CONTENT="IEEE">
 	<META NAME="CREATED" CONTENT="20180818;231400000000000">
-	<META NAME="CHANGEDBY" CONTENT="Burak Can TEMİZEL">
-	<META NAME="CHANGED" CONTENT="20191026;231500000000000">
+	<META NAME="CHANGEDBY" CONTENT="Ozge Poyraz">
+	<META NAME="CHANGED" CONTENT="20191201;172800000000000">
 	<META NAME="__Grammarly_42___1" CONTENT="H4sIAAAAAAAEAKtWcslP9kxRslIyNDYyNDU0N7QwMTMwNjY3NzZT0lEKTi0uzszPAykwrAUAt9LCuywAAAA=">
 	<META NAME="__Grammarly_42____i" CONTENT="H4sIAAAAAAAEAKtWckksSQxILCpxzi/NK1GyMqwFAAEhoTITAAAA">
-
-
+	
 </HEAD>
 <BODY LANG="en-US" TEXT="#000000" LINK="#0000ff" DIR="LTR">
 <H1 ALIGN=CENTER STYLE="text-indent: 0in; margin-top: 0.07in; margin-bottom: 0.07in; line-height: 100%">
-	<FONT SIZE=12>Programlama Laboratuvarı Raporu</FONT></H1>
-<H2 ALIGN=CENTER STYLE="text-indent: 0in; margin-top: 0.07in; margin-bottom: 0.07in; line-height: 100%">
-<FONT SIZE=16>3D Nokta Okuma</FONT></H2>
+<FONT SIZE=6>Programlama Laboratuvarı Pokemon Kart Oyunu</FONT></H1>
 
 <P ALIGN=CENTER STYLE="text-indent: 0in; margin-top: 0.07in; margin-bottom: 0.07in; line-height: 50%">
 <BR><BR>
 </P>
 <DIV ID="Section1" DIR="LTR" GUTTER=48 STYLE="column-count: 3">
 	<P ALIGN=CENTER STYLE="text-indent: 0in; margin-top: 0.07in; margin-bottom: 0.03in; line-height: 100%">
-	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Özge POYRAZ
-	<BR>Kocaeli Üniversitesi</FONT><FONT SIZE=3><I> <BR></I></FONT><FONT SIZE=3>Mühendislik
-	Fakültesi</FONT><FONT SIZE=3><BR>Bilgisayar Mühendisliği</FONT><FONT SIZE=3><I>
-	<BR></I></FONT><FONT SIZE=3>180202025@kocaeli.edu.tr</FONT></FONT></P>
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=2 STYLE="font-size: 9pt">Özge
+	POYRAZ <BR>Kocaeli Üniversitesi</FONT><FONT SIZE=2 STYLE="font-size: 9pt"><I>
+	<BR></I></FONT><FONT SIZE=2 STYLE="font-size: 9pt">Mühendislik
+	Fakültesi<BR></FONT><FONT SIZE=2 STYLE="font-size: 9pt">Bilgisayar
+	Mühendisliği</FONT><FONT SIZE=2 STYLE="font-size: 9pt"><I>
+	<BR>180202025@kocaeli.edu.tr</I></FONT></FONT></P>
 	<P ALIGN=CENTER STYLE="text-indent: 0in; margin-top: 0.07in; margin-bottom: 0.03in; line-height: 100%">
 	<BR><BR>
 	</P>
 	<P ALIGN=CENTER STYLE="text-indent: 0in; margin-top: 0.07in; margin-bottom: 0.03in; line-height: 100%">
-	 <FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Burak Can
-	TEMİZEL<BR>Kocaeli Üniversitesi</FONT><FONT SIZE=3><I><BR></I></FONT><FONT SIZE=3>Mühendislik
-	Fakültesi</FONT><FONT SIZE=3><BR>Bilgisayar Mühendisliği</FONT><FONT SIZE=3><I>
-	<BR></I></FONT><FONT SIZE=3>180202024@kocaeli.edu.tr</FONT></FONT></P>
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=2 STYLE="font-size: 9pt">Burak
+	Can TEMİZEL<BR>Kocaeli Üniversitesi</FONT><FONT SIZE=2 STYLE="font-size: 9pt"><I>
+	</I></FONT><FONT SIZE=2 STYLE="font-size: 9pt"><BR>Mühendislik
+	Fakültesi</FONT><FONT SIZE=2 STYLE="font-size: 9pt"><I><BR></I></FONT><FONT SIZE=2 STYLE="font-size: 9pt">Bilgisayar
+	Mühendisliği<BR>180202024@kocaeli.edu.tr</FONT></FONT></P>
 </DIV>
 <DIV ID="Section2" DIR="LTR" GUTTER=48 STYLE="column-count: 3">
 	<P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
@@ -44,265 +43,337 @@
 	</P>
 </DIV>
 <DIV ID="Section3" DIR="LTR" GUTTER=24 STYLE="column-count: 2">
-	<P STYLE="text-indent: 0.19in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 9pt"><I><B><FONT COLOR="#000000"><FONT SIZE=3 STYLE="font-size: 13pt">Özet—Bu
-	çalışmada genel olarak 3 boyutlu uzayda belirli nokta kümeleriyle
-	geometrik işlemler gerçekleştirdik ve bu işlemlerden birtakım
-	sonuçlar elde ettik. Bu işlemleri gerçekleştirirken nokta
-	bilgilerini dosya girdileri olarak aldık bu da bize fazla sayıda
-	veri ile işlem yapma imkanı sağladı. Bu şekilde program büyük
-	veri dosyalarını işleyerek işlemlerin çok hızlı bir şekilde
-	yapılıp sonuçların elde edilmesini oldukça kolaylaştırdı.
-	Veri dosyalarıyla yapılan bu işlemler aynı zamanda bize
-	verilerin görselleştirilmesi ve incelenmesi fırsatını da verdi.
-	İşlemleri gerçekleştiren yapıyı kurduktan sonra ayrı bir
-	programda verilerimizi görselleştirerek sonuçların doğruluğunu
-	test etmiş olduk. Program yapısal olarak dosya okuma, geometrik
-	işlemleri gerçekleştirme ve sonuç verme aşamalarından
-	oluşuyor. Dosya okurken farklı veri tipinde dosyaların okuması
-	gerçekleştiriliyor ve nokta bilgileri elde ediliyor. Daha sonra bu
-	nokta bilgileri kullanılarak çeşitli işlemler gerçekleştiriliyor
-	ve aynı veri tipinde hesaplanan yeni nokta bilgilerini kullanıcıya
-	çıktı olarak veriyor. Bu proje dosya işlemleri, dinamik bellek
-	kullanımı, lineer cebir ve geometrik işlemler gibi konularda çok
-	sayıda kazanım elde etmemizi sağladı.</FONT></FONT></B></I></FONT></P>
-	<H1 LANG="en-US" CLASS="western">I.<FONT SIZE=3><B>PROJE HAKKINDA</B></FONT></H1>
-	<P LANG="en-US" CLASS="western"><FONT SIZE=3><SPAN LANG="tr-TR">Gerçekleştirdiğimiz
-	proje birkaç temel aşamadan oluşmaktaydı ve her aşamanın
-	kendine göre isterleri bulunmaktaydı. Proje kaba olarak özel bir
-	dosya formatından okuduğumuz nokta verilerini belli işlemlerden
-	geçirip kullanıcıya bir çıktı vermek üzerineydi. Daha
-	ayrıntılı olarak bahsetmemiz gerekirse “.nkt” uzantılı
-	olarak hazırlanmış yazı belgelerinde bir dosya yapısı
-	oluşturulmuş ve içerisine farklı veri tiplerinde ve farklı
-	parametreler içeren nokta bilgileri yazılmıştı. Programımızla
-	bu dosyalardan noktaları okuyup işleme başlamadan önce ayrıca
-	gerçekleştirmemiz gereken ek dosya işlemleri mevcuttu. Burada en
-	önemli hususlardan birisi bir klasörden bilinmeyen sayıda
-	dosyanın otomatik bir şekilde okunmasıydı. Bu konuya daha sonra
-	yöntemler ve program mimarisi kısmında detaylıca değinilecektir.
-	Dinamik bir dosya okuma yapısı kurulduktan sonra noktalar okunacak
-	ve istediğimiz işlemleri gerçekleştirebilmek için belleğe
-	atılacaktı. Daha sonra elde ettiğimiz verilerle hedeflediğimiz
-	sonuçları elde etmek için kullanmamız gereken matematiksel
-	yöntemleri hazırlamamız gerekecekti. Yine aynı şekilde bu
-	işlemlerin matematiksel modellemelerine raporun ileri kısımlarında
-	değinilecektir.</SPAN></FONT><FONT COLOR="#000000"><FONT SIZE=3>
-	Bazı matematiksel işlemler az sayıda veri ile hızlı ve kolay
-	bir şekilde gerçekleştirilebilir.&nbsp; Çok sayıda verinin
-	işlenmesi, hesaplanması çok fazla zaman ve emek ister. Bu
-	problemleri çözmek amacıyla hazırlanmış bilgisayar
-	programlarından yardım almak; zamanı oldukça azaltacaktır, efor
-	kaybına engel olacaktır ve hata payını ortadan kaldıracaktır.
-	Bu programı hazırlarken sürekli büyük verilerle
-	kullanabileceğini düşünerek ona göre bir mimari hazırlamaya
-	özen gösterdik. Hem yavaş çalışmaması hem de kaynakları iyi
-	kullanması gerekiyordu. Bu amacı gerçekleştirmek için çeşitli
-	yöntemler izledik. Dosya işlemlerini gerçekleştirdikten sonra
-	elde ettiğimiz no</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=3><SPAN LANG="tr-TR">kta</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=3>
-	verileriyle matematiksel işlemleri gerçekleştirdik. Programımızın
-	temel amaçlarından</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=3><SPAN LANG="tr-TR">
-	birisi</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=3>
-	dosyalardan alınan verileri</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=3><SPAN LANG="tr-TR">
-	okuyup işlemleri gerçekleştirip noktaları uzun süreli bellekte
-	tutmaktan kaçınmaktı</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=3>.</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=3><SPAN LANG="tr-TR">
-	Daha sonra elde edilen sonuçları kullanıcıya tekrar bir dosya
-	olarak sunmamız gerekiyordu. Burada işlemden geçirdiğimiz nokta
-	verilerinin sonuçlarını bir sınıflandırmaya tabi tutup
-	okuduğumuz veri tipinde çıktı işlemini gerçekleştirdik.
-	Binary ve ascii dosyalar için farklı çıktılar oluşturduk.</SPAN></FONT></FONT></P>
-	<H1 LANG="en-US" CLASS="western">II.<FONT SIZE=3><B>YÖNTEMLER VE
-	PROGRAM MİMARİSİ</B></FONT></H1>
-	<H2 LANG="en-US" CLASS="western"><FONT SIZE=3><B>A.Dosya İşlemleri</B></FONT></H2>
-	<P LANG="en-US" CLASS="western"><FONT SIZE=3><SPAN LANG="tr-TR">Programımız
-	çok sayıda dosya işlemini gerçekleştiren bir yapıdaydı.
-	Burada ilk ve önemli bir husus olarak karşımıza dinamik dosya
-	okuması çıkmaktaydı. Verilen istere göre programımız otomatik
-	olarak klasöründe bulunan “.nkt” dosyalarını işleme
-	sokmalıydı. Bunun için sadece dosya işlemleri yetmemekteydi aynı
-	zamanda klasör işlemleri gerçekleştirmeliydik. Klasör bilgisini
-	edinmek için Open Group Library “dirent.h” kütüphanesini
-	kullandık. Bu başlık dosyası içerdiği özel değişken
-	tipleri, veri yapıları ve fonksiyonlarla klasör işlemlerini
-	gerçekleştirmemizi sağladı. Burada temel olarak kullandığımız
-	fonksiyon ve yapılardan bazıları klasörü açmak için
-	opendir(), klasör okuma işlemi için readdir(), klasör kaynağı
-	tipi olan DIR ve girdilere ulaşmak için dirent struct yapısıydı.</SPAN></FONT><FONT SIZE=3>
-	</FONT><FONT SIZE=3><SPAN LANG="tr-TR">Bu ve bunun gibi yapılarla
-	dosya girdilerimize ulaşıp istediğimiz şekilde dosya
-	dizilerimizi yaratarak gerekli ortamı oluşturmuş olduk. Daha
-	sonrasında da dosya işlemlerimizi gerçekleştirdik</SPAN></FONT><SPAN LANG="tr-TR">.
-	</SPAN><FONT SIZE=3><SPAN LANG="tr-TR">Dosya işlemlerimizi
-	gerçekleştirirken kullanıcıdan aldığımız dosyanın veri
-	tipine göre binary okuma ve yazma işlemi de gerçekleştirdik.
-	Binary işlemlerini gerçekleştirirken değerlerimizin doğruluğunu
-	çeşitli hex editörler ile test ettik.</SPAN></FONT></P>
-	<H2 LANG="en-US" CLASS="western"><FONT SIZE=3><B>B.Verilerin
-	Okunması ve Saklanması</B></FONT></H2>
-	<P LANG="en-US" CLASS="bullet-list-western" STYLE="margin-left: 0in; text-indent: 0in">
-		<FONT SIZE=3><SPAN LANG="tr-TR">Programımızın bellekte daha az
-	alan tüketmesi için okuduğumuz verileri tek bir dinamik struct
-	dizisinde tutmaya çalıştık böylece her dosya için sürekli
-	aynı diziyi tekrar tekrar boyutlandırarak işleme sokup bu şekilde
-	noktaları depoladık. Daha sonra bu diziyi işlemlere göndererek
-	kullandık. Dosyalardan hataları yakalarken tüm dosya yapısını
-	halihazırda okumuş olacağımız için buradan elde ettiğimiz
-	dosya verilerini yine sadece dosyalarla ilgili bilgilerin saklanması
-	ve hataların tutulması amacıyla oluşturduğumuz dinamik struct
-	dizilerinde sakladık bu da daha sonra program akışında veri
-	tipleri, parametre tipleri ve dosyalarla ilgili bilgileri
-	yönlendirirken oldukça işimize yaradı ve tekrar tekrar
-	dosyalardan bilgi okuma zorunluluğumuzu ortadan kaldırdı.</SPAN></FONT></P>
-	<H2 LANG="en-US" CLASS="western"><FONT SIZE=3><B>C.Matematiksel
-	İşlemler</B></FONT></H2>
-	<P LANG="en-US" CLASS="western"><FONT SIZE=3><SPAN LANG="tr-TR">Dosyalardan
-	elde ettiğimiz verileri farklı işlemlerden geçirip bazı
-	çıktılar elde etmemiz gerekiyordu. Burada her işlem için farklı
-	matematiksel metotlar kullandık. En yakın ve en uzak probleminde
-	iki nokta arasındaki uzaklığı Pisagor teoreminden faydalanarak
-	tespit ederek işlemlerimizi gerçekleştirdik. En küçük küp
-	problemine geldiğimizde yine aynı teoremden faydalanarak her eksen
-	için noktalar kümesinde maksimum uzunluğu bularak küpün sahip
-	olacağı ayrıtı tespit ettik. Daha sonrasında yine her eksendeki
-	uzaklık farkından faydalanarak küpün merkez noktasını bulduk
-	ve ayrıt uzunluğundan da faydalanarak köşe koordinatlarını
-	oluşturduk. Bu sırada fark ettik ki eğer herhangi bir eksende
-	maksimum uzaklık diğer bir eksenden küçükse yani küpün her
-	kenarına bir nokta temas etmiyorsa aslında hacmi sabit kalmakla
-	birlikte sonsuz pozisyonda küp tüm noktaları içine alabilecekti.
-	Programımız yapısal olarak bir konsol uygulaması olduğu için
-	bunu görselleştirme imkanımız yoktu. Daha sonra Processing
-	Java’da ayrı bir program yazarak işlemlerimizin matematiksel
-	modellerini görselleştirdik. Böylece kendi programımızdaki
-	sonuçlarımızın doğruluğunu teyit etmiş olduk.      </SPAN></FONT>
+	<P STYLE="text-indent: 0.19in; margin-bottom: 0.14in; line-height: 100%">
+	<FONT SIZE=2 STYLE="font-size: 9pt"><B><I>Özet</I>—Bu çalışmada
+	nesneye yönelik programlama ve arayüz ögeleri ile bir pokemon
+	kart oyunu gerçekleştirdik. Oyun mantığı için basit bir oyun
+	döngüsü kullandık ve grafik fonksiyonları ile animasyonlar
+	oluşturduk. Çeşitli veri yapılarını ve nesneye yönelik
+	programlamanın temel kavramlarından olan kapsülleme, kalıtım,
+	çok biçimliliği kullanarak oyunu tamamladık.</B></FONT></P>
+	<P STYLE="text-indent: 0.19in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 9pt"><I><B>Anahtar
+	kelimeler—Nesne, sınıf, oyun, arayüz, pokemon </B></I></FONT>
 	</P>
-	<P LANG="tr-TR" CLASS="western" STYLE="text-indent: 0in"><IMG SRC="http://burakcantemizel.com/resimler/3dn2.png" NAME="graphics1" ALIGN=BOTTOM  BORDER=0></P>
-	<P LANG="tr-TR" CLASS="western" STYLE="text-indent: 0in"><IMG SRC="http://burakcantemizel.com/resimler/3dn4.png" NAME="graphics2" ALIGN=BOTTOM  BORDER=0></P>
+	<H1 LANG="en-US" CLASS="western">I.Giriş 
+	</H1>
+	<P LANG="tr-TR" CLASS="western">Gerçekleştirdiğimiz proje
+	temelinde basit bir oyun olsa da içerisinde farklı farklı
+	sistemler içermekteydi. İlk olarak her oyun gibi bu oyunun da bir
+	arayüze sahip olması gerekliydi. Bu arayüz ortamını gerçeklemek
+	için Java’nın dahili grafik kütüphaneleri olan swing ve awtden
+	faydalandık. Oyunumuz bir kart oyunu olması sebebiyle mantık
+	olarak nesneye yönelik programlama konseptine çok uygundu. Burada
+	oyundaki çeşitli nesneler için çeşitli sınıflar tanımlandı.
+	Oyunun mantığının işlemesi için farklı seçeneklerimiz
+	bulunuyordu. Kart oyunu olması sebebiyle ilk olarak event sistemi
+	üzerinde durduk. Böylece gerçekleştirilen seçimler veya
+	etkileşimlere karşılık olayları tetikleyerek oyun akışını
+	oluşturabilecektik fakat oyun içerisinde çeşitli animasyonları
+	ya da fizik etkileşimleri kullanabilme ihtimalimiz olursa diye oyun
+	döngüsü kullanmaya karar verdik. Oyunun yapısı gereği farklı
+	türde oyun döngülerinden en doğru olanı seçmemiz gerekiyordu
+	fakat düşününce render işleminin oyun mantığından bağımsız
+	oluşu ve fiziksel etkileşimlerin olmaması sebebiyle değişken ya
+	da sabit zamanlı oyun döngüsü kullanmayıp işlem yaptığımız
+	threadi kullanarak belli bir kare sayısı elde ettik. Bu kısma
+	daha sonra yöntemler ve program mimarisinde daha detaylıca
+	değinilecektir. Oyunun sınıf yapısı daha önceden belli bir
+	patternde bize verilmişti ve buradaki metotları düzenleyerek ya
+	da ekleme yaparak genel yapıyı oluşturduk. Oyunun temelde bir
+	kart oyunu olması sebebiyle kartların bir veri yapısında
+	tutulması gerekiyordu, bunun için çeşitli alternatifler olmasına
+	karşın biz hem gerçeklemesinin daha kolay olmasıyla hem de kart
+	listelerini daha iyi modellediğini düşünmemizden ötürü
+	arraylist yapısını kullanmayı tercih ettik.  Oyun yapısal
+	olarak bir pencere içerisindeki tek bir panelde her sahne için
+	farklı bir oyun mantığı ve render metodu çalıştırarak
+	çalışıyor. Temelde mevcut olan menü, bilgisayar – bilgisayar
+	ve kullanıcı – bilgisayar sahneleri için aynı metotlar farklı
+	logicler ve render işlemlerini gerçekleştirerek sahneler
+	oluşturuluyor. Bunun sebebi ise oyun sahneleri içerisinde farklı
+	işlemlerin gerçekleştirilmesi. Kullanıcı – bilgisayar
+	sahnesinde kullanıcı bilgisayara karşı oynuyorken,  bilgisayar -
+	bilgisayar sahnesinde  kullanıcı girişi olmuyor ve bilgisayar
+	nesneleri kendi kendilerine oyun döngüsünü ilerletiyorlar.</P>
+	<H1 LANG="en-US" CLASS="western">II.Yöntemler ve Program Mimarisi</H1>
+	<P LANG="en-US" CLASS="western">B<SPAN LANG="tr-TR">u kısımda
+	programın farklı özelliklerini oluşturmak için kullandığımız
+	araçlar ve yöntemler üzerinde durularak ayrıntılı olarak bilgi
+	verilecektir ve program mimarisi daha detaylı bir şekilde
+	açıklanacaktır.</SPAN></P>
+	<H2 LANG="en-US" CLASS="western">A.Arayüz Programlama</H2>
+	<P LANG="en-US" CLASS="western"><SPAN LANG="tr-TR">Program ilk
+	oluşturulurken bir adet JFrame objesi içerisine JPanel nesnesini
+	extend eden Oyun sınıfını ekleyerek temel pencereyi oluşturuyor.
+	Bu aşamadan sonra herhangi bir JFrame ya da JPanel nesnesi
+	kullanılmıyor ve mevcut olan pencere ve panel çeşitli oyun
+	sahneleri için farklı mantık ve render metotlarıyla sürekli
+	olarak güncellenerek temel pencere yapısı oluşturuluyor. Oyun
+	sınıfı, oyunun tüm genel işleyişini yürüttüğü gibi tüm
+	genel çizim fonksiyonlarını da içerisinde barındırıyor.
+	Böylece oyun sınıfının daha sonra bahsedilecek olan basit oyun
+	döngüsü içerisinde ayarla, güncelle ve paint gibi metotları
+	çağırılarak oyun mantığı ve çizim akışı sağlanıyor.
+	Panel içerisinde çeşitli sahnelerin çizdirilmesi ve kontrolü
+	için sahne adlı değişken kullanılıyor, bu değişken mevcut
+	olan sahneyi tutuyor ve oyun döngüsü içerisindeki işlemler bu
+	sahneye göre gerçekleştiriliyor. Böylece ekrana şu anda
+	bulunulan sahne yansıtılmış oluyor. Oyunun çeşitli
+	sahnelerinde örneğin; Kullanıcı – bilgisayar ve bilgisayar –
+	bilgisayarda oyun sonunda tekrar menüye dönüş işleminde halen
+	aynı döngü içerisinde bulunduğumuz için oyun akışının
+	bozulmaması için ayarla adında bir metot yardımı ile oyun
+	döngüsünde kullanılan değişkenlere tekrar atama yapılarak
+	sahnelerin sıfırlanması sağlanıyor. Yukarıda bahsettiğimiz
+	gibi oynanışın sürdüğü iki adet temel sahne bulunmakta.
+	Kullanıcı – bilgisayar ve bilgisayar - bilgisayarda her ne kadar
+	oyun mantığı farklı olsa da arayüz konusunda oldukça benzer
+	şekilde gerçekleşmektedirler. Burada temel mantık panel
+	işlevimizi gören Oyun sınıfındaki paint metodu kullanarak
+	çizimin gerçekleşmesi. Buradaki Graphics nesnesi çeşitli
+	metotlara argüman olarak gönderilip, işleniyor ve panel
+	üzerindeki görüntü güncellenmiş oluyor. Arayüz içerisinde
+	JFrame ve JPanel haricinde herhangi bir swing ya da awt nesnesi
+	kullanılmayıp tüm çizimler Graphics objesi üzerinden panele
+	yapılıyor. Böylece bu nesnelerin eventlerini de kullanmayarak
+	daha sonra bahsedeceğimiz döngüler içerisinde kendi mantığımızı
+	oluşturup kullanıyoruz.</SPAN> 
+	</P>
+	<H2 LANG="en-US" CLASS="western">B.Sınıf ve Nesne Yapısı</H2>
+	<P LANG="tr-TR" CLASS="western">Projenin gerçekleştirilmesinde
+	Java programlama dilini ve nesneye yönelik programlama prensibini
+	kullandığımız için bu kısımda sınıf ve nesne yapısı daha
+	detaylı açıklanacaktır. Öncelikle oyunun ana paneli olan ve
+	çeşitli ana fonksiyonlarının yürütüldüğü bir Oyun sınıfı
+	bulunmaktadır. Bu sınıfın herhangi bir nesnesi türetilmeyip    
+	   genellikle metotları ve değişkenleri statik metotlardır.     
+	   En önemli görevi temel oyun yapısını barındıran sınıf
+	olmasıdır diğer tüm sınıflardan türeyen nesneler bu sınıfta
+	işlenerek oyun ortaya çıkmaktadır. Oyun sınıfı ayrıca
+	içerinde main metodunu da barındırmaktadır. Main metodu
+	içerisinde basit oyun döngüsünü barındırmaktadır ve bu döngü
+	içerisinde Oyun sınıfının içerisindeki oyun mantığı ve
+	render metotlarını çağırır. Oyun sınıfı ayrıca oyun
+	içerisinde kullanılan çoğu değişkeni ve sabiti de statik bir
+	şekilde içermektedir böylece diğer sınıflardan ulaşılıp
+	kullanılabilmektedirler. Onun dışında temel sınıflarımızdan
+	birisi Oyuncu sınıfıdır bu sınıf oyun içerisindeki
+	oyuncuların özelliklerini ve metotlarını barındırmaktadır ve
+	abstract bir sınıftır ve abstract bir metodu bulunmaktadır. Bu
+	metot kartSec() metodudur. Sebebi ise oyun içerisinde Oyuncu
+	sınıfını extend eden iki farklı oyuncu yapısının
+	bulunmasıdır. bilgisayar ve insan oyuncusu için iki farklı sınıf
+	bulunmaktadır bu sınıflar Oyuncu sınıfından türemiştir ve
+	abstract olan kartSec() metodunu doldurmak zorundadır. Bunun sebebi
+	ise bilgisayar ve insan için oyun döngüsü içerisinde
+	gerçekleşen farklı kart seçme mekanizmalarıdır. Onun haricinde
+	ikisinin ortak olarak override ettiği metotlarda bulunmaktadır.
+	Bunun haricinde bir diğer temel sınıfımız ise Pokemon
+	sınıfıdır. Pokemon sınıfı oyun içerisinde bulunan kartların
+	türetildiği en genel sınıftır. Bu sınıf kartlara birçok
+	özelliği miras bırakmaktadır. Daha sonra on adet Pokemon sınıfı
+	üzerinden bu karta ek olarak yeni özellikler ve metotlar
+	tanımlanarak yine bu kart extend edilerek oluşturulacaklardır.
+	Burada bize verilen patternde on adet Pokemon için Pokemon ana
+	sınıfında bulunmayan bazı özellikler de tanımlanmıştır. Bu
+	özelliklere erişimi için çeşitli yerlerde çok biçimlilik
+	uygulamaları kullanılması gerekmektedir. Verilen pattern dışında
+	bir de basit bir PokeTopu sınıfı bulunmaktadır bu sınıfın
+	amacı sadece menü içerisinde bulunan animasyonun temel nesnesi
+	olmasıdır. Tam olarak program içerisinde bulunan sınıfların
+	listesi şu şekildedir: Oyun, PokeTopu, Pokemon, Bulbasaur,
+	Butterfree, Charmander, Jigglypuff, Meowth, Pikachu, Psyduck,
+	Snorlax, Squirtle, Zubat, Oyuncu, InsanOyuncusu,  
+	BilgisayarOyuncusu. Sınıflara ait ‘UML Sınıf Diyagramı’ ek
+	olarak raporda verilmiştir.</P>
+	<H2 LANG="en-US" CLASS="western">C.Oyun Döngüsü ve Oyun Mantığı</H2>
+	<P LANG="tr-TR" CLASS="western">En başta da bahsettiğimiz gibi
+	oyun mantığının işleyişi için elimizde birkaç farklı
+	alternatif bulunmaktaydı. Öncelikli olarak eğer swing ya da awt
+	elemanlarını kullanarak bir arayüz gerçekleştirseydik. Bu
+	elemanların bağlı olduğu eventlerin yardımı ile kolayca oyun
+	işleyişini gerçekleyebilirdik ama bizim tercih ettiğimiz yöntem
+	bir oyun döngüsü kullanmak oldu. Yine bu noktada elimizde birden
+	fazla alternatifler bulunmaktaydı; sabit zamanlı oyun döngüsü,
+	değişken zamanlı oyun döngüsü, yarı sabit zamanlı oyun
+	döngüsü, serbest fizik oyun döngüsü gibi ama oyunumuzun basit
+	bir kart oyunu olması sebebiyle oyun döngüsünü basit tutarak
+	“Ne kadar hızlı çalışabilirsen çalış.” Mantığı
+	üzerinden bir oyun döngüsü yazarak thread fonksiyonlarından
+	faydalanarak bu döngüyü her seferinde on milisaniye uyutmayı
+	tercih ettik. Böylece işlemlerin gerçekleştiği en iyi senaryoda
+	programımız en fazla yüz kare hızına çıkabilecek ve bu da
+	bizim istediğimiz işlemleri ve animasyonları
+	gerçekleştirebilmemizi sağlayacaktı. Oyun döngüsü sonsuz bir
+	döngü içerisinde başlıyor ve önce oyun mantığının
+	yürütüldüğü ve Oyun sınıfında bulunan güncelle() metodunu
+	çağırıyor oyun mantığı güncellendikten sonra ise render
+	işlemini yapan panel metodu olan ve override ettiğimiz paint()
+	metodunun yürütülmesi için repaint metodunu çağırıyor
+	ardından ise threadi on milisaniye uyutarak kare hızımızın
+	kontrolünü sağlıyor. Döngü içerisinde herhangi bir çıkış
+	şartı bulunmuyor. Programın terminate işlemi Oyun sınıfı
+	tarafından gerçekleştirilene kadar oyun döngüsü sonsuz bir
+	şekilde çalışıyor. Oyun döngümüz en iyi ihtimalle yüz kare
+	hızı üzerinden çalıştığı için oyun mantığındaki tüm
+	işlemlerde saniyede yüz kez çalışıyor. Burada oyun mantığının
+	sağlanması için çeşitli flag değerleri ve zamanlayıcılarla
+	program akışı kontrol edilerek işlemlerin kare hızı kadar
+	gerçekleştirilmesi engelleniyor çünkü kart oyununda
+	etkileşimler ile gerçekleşen işlemler kullanılmasına karşın
+	sürekli bir görüntü yenilenmesi elde etmeyi hedeflemiştik. Oyun
+	mantığı kartların ayarlanması, dağıtılması, karıştırılması,
+	kart seçilmesi, savaş işlemi, skorların güncellenmesi, oyun
+	sonunun kontrolü gibi çok çeşitli işlemleri yürütüp her
+	karede bunların akışını kontrol ediyor. Onun haricinde render
+	işlemini yaptığımız paint() metodu ise menü, oyun arka planı,
+	butonlar, kartlar, skorlar gibi tüm ögelerin ekrana sürekli
+	olarak çizilmesini sağlıyor ayrıca menüde Poketopu animasyonun
+	çizilmesini gerçekleştiriyor.</P>
+	<P LANG="tr-TR" CLASS="western"><BR><BR>
+	</P>
+	<P ALIGN = CENTER LANG="en-US" CLASS="western" STYLE="text-indent: 0in">   
+	<IMG SRC="http://burakcantemizel.com/resimler/pok3.png" NAME="graphics1" ALIGN=CENTER BORDER=0></P>
 	<P ALIGN=CENTER STYLE="text-indent: 0in; margin-top: 0.17in; margin-bottom: 0.17in; line-height: 90%">
-	<FONT FACE="Symbol, serif"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Kullandığımız
-	matematiksel modellemelerin görselleştirilmesi</I></FONT></FONT></FONT></P>
-	<H2 LANG="en-US" CLASS="western"><FONT SIZE=3><B>D.Program Çıktıları</B></FONT></H2>
-	<P LANG="en-US" CLASS="bullet-list-western" STYLE="margin-left: 0in; text-indent: 0in">
-	<SPAN LANG="tr-TR">	</SPAN><FONT SIZE=3><SPAN LANG="tr-TR">Programımız
-	farklı veri tiplerinde dosyalarla işlem yaptığı için
-	çıktılarımızı da buna göre biçimlendirmek zorundaydık.
-	Binary dosya çıktılarını oluştururken öncelikle verilerimizin
-	binarye doğru bir şekilde dönüştürüldüğünü test ettik ve
-	daha öncesinde program akışını kontrol etmek için
-	hazırladığımız çeşitli yapılarla bu verileri çıktı olarak
-	kullanıcıya sunduk.</SPAN></FONT></P>
-	<H2 LANG="en-US" CLASS="western">E.<FONT SIZE=3><SPAN LANG="tr-TR"><B>Programın
-	Genel Yapısı ve Tasarım</B></SPAN></FONT></H2>
+	<FONT FACE="Symbol, serif"><FONT FACE="Times New Roman, serif"><I>Basit
+	Oyun Döngüsü Diyagramı</I></FONT></FONT></P>
+	<H2 LANG="en-US" CLASS="western">D.Kullanılan Temel Veri Yapıları</H2>
+	<P LANG="tr-TR" CLASS="western">Oyun mekaniği kurulurken sürekli
+	olarak kartlarla çeşitli işlemler gerçekleştirilmesi
+	gerekiyordu. Burada kartları saklamak için bir veri yapısı
+	kullanmamız gerekiyordu. Dizi kullanmak yerine ArrayListleri
+	kullanmayı tercih ettik. Bu seçim peşinde birçok mekaniği de
+	getirmiş oldu. Örnek olarak kartları dinamik bir ArrayListte
+	tutmanın bize en büyük getirilerinden biri çizim aşamasında
+	oldu. Bir döngü içerisinde belli koordinat hesaplamalarıyla
+	listenin o an sahip olduğu kart adetine göre çizim işlemlerini
+	tek bir fonksiyon içerisinde gerçekleştirdik. Böylece kaç adet
+	kart olursa olsun her seferinde ekranın belirli bir bölgesine
+	kendi kendini ortalayarak çizim fonksiyonu tarafından
+	çizdirilebilir hale geldi. ArrayList ile kart listelerini
+	gerçeklemenin en büyük artılarından biri de objeleri tuttuğumuz
+	için gerçekten de bir kart oyununda olduğu gibi bir desteden
+	diğerine kart aktarma kartların adetinin bu şekilde dinamik
+	olarak artması ve azalması gerçek bir modelleme gibi olmasını
+	sağladı. ArrayList ile işlem yaparken bazı noktalarda Java’nın
+	hazır fonksiyonlarından da faydalandık örneğin; Collections
+	sınıfının shuffle metodu yardımı ile ArrayListi rastgele bir
+	şekilde karıştırdık.</P>
+	<H2 LANG="en-US" CLASS="western">E.Dosya İşlemleri</H2>
 	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">
-	<FONT SIZE=3><SPAN LANG="tr-TR">Programın genel yapısı ve işleyiş
-	algoritması raporun en sonunda verilmiştir. Tasarım olarak
-	standart bir konsol uygulaması biçimindedir</SPAN></FONT><SPAN LANG="tr-TR">.</SPAN></P>
-	<P LANG="tr-TR" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">
+	Projeyi gerçekleştirirken klasik Java arayüz componentlerinin
+	aksine kendi görsel dosyalarımızı çizdirerek daha çarpıcı ve
+	güzel bir arayüz oluşturmayı hedeflemiştik. Bu yüzden harici
+	olarak grafik dosyalarını dizinden almamız ve çeşitli render
+	metotlarımızla çizdirmemiz gerekiyordu. Bunun için önce grafik
+	metotlarını daha sonra grafik dosyalarını hazırladık. Sıra
+	program akışının başında bu dosyaları yüklemeye geldiğinde
+	karşımıza bir takım dizin işlemi çıktı. Dosyaları yüklemek
+	için birçok farklı alternatifimiz olduğunu gördük fakat biz
+	Java’nın File sınıfından yardım alarak yüklemeyi seçtik.
+	Burada url ve göreceli olmak üzere iki farklı dizin yolu
+	karşımıza çıktı. Yüklemeyi yaparken istersek direct olarak
+	dosyanın geçerli sistemdeki adresini ve File sınıfını
+	kullanarak yüklemesini gerçekleştirebiliyorduk fakat böyle bir
+	durumda proje kaynak dosyası farklı bir sisteme taşındığı
+	zaman aynı klasörün o sistemde de bulunması gerekiyordu. Böyle
+	bir sorunla karşılaşmamak için göreceli dosya yolu sistemini
+	kullanmaya karar verdik. Burada File sınıfına herhangi bir adres
+	bilgisi verilmediği zaman Projemizin kök dizininde src klasörünün
+	yanına klasör imlecini otomatik olarak yerleştirip dosya
+	okumasını oradan gerçekleştirildiğini gördük. Javanın
+	paketli proje yapısında src dizininden üst dizinlere çıkılması
+	gerekiyordu, (kaynak dosyalarımızın proje kök dizininin içinde
+	olduğunu varsayarsak) fakat bir herhangi bir paket kullanmadığımız
+	için zaten src klasörünün bulunduğu konum kök dizinimiz
+	oluyordu ve buradan kaynaklar klasörünü okuyarak dosya
+	yüklemelerimizi gerçekleştirebildik.</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; text-indent: 0in; margin-bottom: 0in; line-height: 100%">
 	<BR>
 	</P>
-	<P LANG="tr-TR" CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-	<IMG SRC="http://burakcantemizel.com/resimler/3dn1.png" NAME="graphics3" ALIGN=BOTTOM  BORDER=0></P>
-	<P LANG="tr-TR" CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+	<H1 LANG="en-US" CLASS="western">III.Geliştirme Ortamı ve
+	Kullanılan Dil</H1>
+	<P LANG="tr-TR" CLASS="western">Projeyi Java programlama dilinde
+	Windows işletim sistemi üzerinde gerçekleştirirken, geliştirme
+	ortamı olarak 11.0.2 JDK konfigürasyonlu Intellij Idea idesini
+	kullandık. Kaynak dosyaları Intellij Idea proje formatına
+	sahiptir.</P>
+	<H1 LANG="en-US" CLASS="western">IV.Programın Genel Yapısı Ve
+	Tasarımı</H1>
+	<P CLASS="western" ALIGN=LEFT STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 100%">
+	Program temel olarak menü, kullanıcı – bilgisayar ve bilgisayar
+	– bilgisayar olmak üzere üç adet sahne içeriyor. Her sahne
+	farklı bir tasarıma sahip ve basit bir sahne yöneticisi
+	aracılığıyla sahneler arası geçiş gerçekleştiriliyor.</P>
+	<P CLASS="western" ALIGN=LEFT STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 100%">
 	<BR>
 	</P>
-	<P LANG="tr-TR" CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-	<I>Programın Genel Arayüzü</I></P>
-	<P LANG="tr-TR" CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+	<P CLASS="western" ALIGN=LEFT STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+	.</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+	<IMG SRC="http://burakcantemizel.com/resimler/pok1.png" NAME="graphics2" ALIGN=BOTTOM  BORDER=0><I>Oyun
+	Menüsünün Genel Tasarımı</I></P>
+	<P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
 	<BR>
 	</P>
-	<H2 LANG="tr-TR" CLASS="western"><FONT SIZE=3><B>F.Performans</B></FONT></H2>
+	<P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+	<IMG SRC="http://burakcantemizel.com/resimler/pok2.png" NAME="graphics3" ALIGN=BOTTOM  BORDER=0><I>Sunum
+	Modu Açık iken Oyun İçi Tasarım</I></P>
+	<P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+	<BR>
+	</P>
+	<H1 LANG="en-US" CLASS="western">V.Deneysel Sonuçlar</H1>
+	<P LANG="tr-TR" CLASS="western">Bu projeyle birlikte oyun
+	döngülerinin işleyişi, döngünün fiziksel hesaplara ve
+	etkileşimlere etkisi, kare hızının çizimlere etkisi gibi birçok
+	şeyi gözlemledik. Kaynak görsel dosyalarımızı yüklerken dizin
+	işlemlerini gerçekleştirmek için Java’nın proje dizin yapısı
+	hakkında pek çok şey öğrendik. Göreceli dizin yolundan dosya
+	yüklemeyi gerçekleştirdik. Java awt ve swing sınıflarının
+	hiyerarşisi, arayüz modüllerini öğrenirken oyun döngümüzde
+	ihtiyaç duyduğumuz inputları almak için Java’nın event
+	sistemlerinden yardım aldık görecelide olsa bu eventleri
+	kullanarak ana threadimizde çalışan oyun döngümüze çeşitli
+	input girişleri yolladık ve bunları oyun akışı için
+	kullandık. Nesneye yönelik programlama konseptlerinde pek çok
+	bilgi edindik. Pokemon sınıfını extend eden diğer subclasslara
+	Pokemon tipinde nesnelerden erişirken bazı zamanlar çok
+	biçimlilik, Oyuncu ve Pokemon yapısında kalıtım, tüm sınıflar
+	için kapsülleme ve eventleri çağırmak için interface
+	yapılarını kullandık ve uyguladık. Oyun mantığını
+	işletirken ArrayList veri yapısını çok çeşitli metotlarıyla
+	kullanma fırsatını bulduk.</P>
+	<H1 LANG="en-US" CLASS="western">VI.Sonuç</H1>
 	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">
-	<FONT COLOR="#c00000"><FONT SIZE=3><SPAN LANG="tr-TR">Program çok
-	sayıda veriyle işlem gerçekleştirebileceği için derlenirken
-	optimize edilmesi performansını büyük ölçüde etkilemektedir.
-	Codeblocks Mingw derleyicisinin içindeki gcc.exe ile yapılan
-	derleme işleminde      -O2 veya -O3 optimizasyon parametreleriyle
-	yapılan derleme işlemlerinde çok büyük bir hız farkı
-	oluşmaktadır ve direkt olarak derlenebilmektedir. Eğer bu
-	optimizasyonlar gerçekleştirilmezse işlemlerde bekleme süreleri
-	artabilmektedir. Bu yüzden bu şekilde derlenmesi gerekmektedir.</SPAN></FONT></FONT></P>
+	Bu projeyi gerçekleştirerek basit bir oynanışa sahip olsa da tam
+	olarak ortaya bir son ürün çıkartmayı başardık. Bir önceki
+	projenin aksine son kullanıcıya daha uygun bir Kullanıcı
+	arayüzüne sahip ve kullanıcının daha kolay etkileşime
+	girebileceği bir uygulama gerçekleştirdik.</P>
 	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">
-	<FONT COLOR="#c00000"><FONT SIZE=3><SPAN LANG="tr-TR">Tam olarak
-	kaynağı main.c olan dosya için terminal ya da komut isteminden
-	Codeblocks/Mingw/bin altındaki gcc.exe yoluna gidilerek aşağıdaki
-	derleme komutu ile derlenmelidir.</SPAN></FONT></FONT></P>
-	<P LANG="tr-TR" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">
 	<BR>
 	</P>
-	<UL>
+	<H1 LANG="en-US" CLASS="western">VII.Kaynaklar</H1>
+	<OL>
 		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-		<FONT COLOR="#ed7d31"><FONT SIZE=3><SPAN LANG="tr-TR">gcc -O3
-		main.c -o “uygulamaismi”</SPAN></FONT></FONT></P>
-	</UL>
-	<P LANG="tr-TR" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.7in; text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-	<BR>
-	</P>
-	<H1 LANG="en-US" CLASS="western">III.<FONT SIZE=3><B>GELİŞTİRME
-	ORTAMI VE KULLANILAN DİL</B></FONT></H1>
-	<P CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-	      <FONT SIZE=3>Projeyi C programlama dilinde Windows işletim
-	sistemi üzerinde gerçekleştirirken, geliştirme ortamı olarak
-	gcc derleyicili Codeblocks 17.12 sürümünü kullandık. Programda
-	kullandığımız kütüphaneler</FONT></P>
-	<UL>
+		https://gameprogrammingpatterns.com/game-loop.html</P>
 		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-		<FONT SIZE=3>stdio.h</FONT></P>
-		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-		<FONT SIZE=3>stdlib.h</FONT></P>
-		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-		<FONT SIZE=3>dirent.h</FONT></P>
-		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-		<FONT SIZE=3>string.h</FONT></P>
-		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-		<FONT SIZE=3>math.h</FONT></P>
-	</UL>
-	<P LANG="tr-TR" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">
-	<BR>
-	</P>
-	<H1 LANG="en-US" CLASS="western">IV.<FONT SIZE=3><B>DENEYSEL
-	SONUÇLAR</B></FONT></H1>
-	<P LANG="en-US" CLASS="western"><FONT SIZE=3><SPAN LANG="tr-TR">Bu
-	projeyle birlikte büyük verilerle işlemler gerçekleştirmeye
-	çalıştık ve bu verileri çeşitli işlemlerden geçirdik. Bu
-	sırada geometri uygulamalarını daha yakından inceleme fırsatı
-	bulduk. Elde ettiğimiz sonuçların doğruluğunu test etmek
-	amacıyla verilerimizi görselleştirerek, kontrol edip bu
-	modellerin çıktılarıyla kıyaslayarak kendi test yöntemlerimizi
-	oluşturduk.En küçük küp problemini çözmeye çalışırken
-	aslında bazı şartlar altında bir nokta kümesini kapsayan sonsuz
-	sayıda küp olduğunu keşfettik.</SPAN></FONT></P>
-	<H1 LANG="en-US" CLASS="western"><FONT SIZE=3><B>V.SONUÇ</B></FONT></H1>
-	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">
-	<FONT SIZE=3>Bu projenin gerçekleştirilmesiyle aslında çok fazla
-	kazanım elde ettik. Bunlardan bahsetmemiz gerekirse geniş çaplı
-	dosya işlemlerinde oldukça tecrübe elde ettik. C programlama
-	dilinin güçlü bir yanı olan bellek işlemlerini bol bol kullanma
-	fırsatı sağladık ve bu şekilde daha optimize bir program elde
-	etmeye çalıştık. Kullanıcı deneyimini iyileştirmek için
-	çalışmalar yapma fırsatı bulduk. Algoritma yeteneğimizi
-	geliştirdik ve bir uygulamayı nasıl daha işlevsel hale
-	getirebiliriz gibi sorularla ilgilendik.</FONT></P>
-	<H1 LANG="en-US" CLASS="western"><FONT SIZE=3><B>VI.KAYNAKLAR</B></FONT></H1>
-	<UL>
-		<LI><P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-		<FONT COLOR="#0000ff"><U><A HREF="https://publications.opengroup.org/"><FONT SIZE=3>https://publications.opengroup.org/</FONT></A></U></FONT></P>
-		<LI><P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-		<FONT COLOR="#0000ff"><U><A HREF="https://web.stanford.edu/class/archive/cs/cs107/cs107.1202/resources/gcc"><FONT SIZE=3>https://web.stanford.edu/class/archive/cs/cs107/cs107.1202/resources/gcc</FONT></A></U></FONT></P>
-	</UL>
-	<P LANG="en-US" CLASS="western" STYLE="text-indent: 0in"><BR><BR>
-	</P>
-
-
+		https://docs.oracle.com/javase/tutorial/2d/images/loadimage.html</P>
+			
 </DIV>
+<P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+	<IMG SRC="http://burakcantemizel.com/resimler/pok4.png" NAME="graphics4" ALIGN=BOTTOM  BORDER=0></P>
+	</OL>
 <DIV ID="Section4" DIR="LTR">
-	<P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-	<FONT SIZE=4><B>Programın Genel Akış Şeması</B></FONT></P>
-	<P CLASS="western" ALIGN=CENTER STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
-	<IMG SRC="http://burakcantemizel.com/resimler/3dn3.png" NAME="graphics4" ALIGN=BOTTOM WIDTH=674 HEIGHT=585 BORDER=0></P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="text-indent: 0in; margin-bottom: 0in; line-height: 100%">
+	<BR>
+	</P>
+
+	     
 </DIV>
 <DIV TYPE=FOOTER>
-	<P ALIGN=CENTER STYLE="text-indent: 0in; margin-top: 0.46in; margin-bottom: 0in; line-height: 100%">
-	<BR>
-	</P>
+
 </DIV>
 </BODY>
 </HTML>
+
